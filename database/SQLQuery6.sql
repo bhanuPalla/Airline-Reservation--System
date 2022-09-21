@@ -1,0 +1,10 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) [ResDId]
+      ,[ResMasterId]
+      ,[ResDPassengerFirstName]
+      ,[ResDPassengerMiddleName]
+      ,[ResDPassengerLastName]
+      ,[ResDGender]
+      ,[ResDAge]
+      ,[ResRandom]
+  FROM [eAirline].[dbo].[ReservationDetails]

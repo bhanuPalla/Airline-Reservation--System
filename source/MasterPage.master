@@ -1,0 +1,131 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ARS</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" href="mykb.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+
+    <script language ="javascript" type="text/javascript">
+
+        // Popup window code
+        function newPopup(url) {
+	        popupWindow = window.open(
+		        url,'popUpWindow','height=400,width=530,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=no')
+        }
+            
+        function gobackpage()
+        {
+            
+        }
+        function cancelflight(id )
+        {
+            //alert(id);
+            var r=confirm('Do you want to cancel this booking?');
+            //alert(r);
+            if (r==true)
+            {
+                location.href='cancelbooking.aspx?id=' + id;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <table border ="0" width ="850" align ="center" >
+    <tr>
+    <td>
+    
+
+    
+    
+    <table border="0" width="100%" id="table2" style="height: 72px;" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="topbg" valign="top" style="height: 85px">
+                <table border="0" width="100%" id="table3" cellspacing="0"
+                    cellpadding="0">
+                    <tr>
+                        <td width="2%">
+                            &nbsp;
+                        </td>
+                        <td width="8%" valign="top">
+                           <img src="images/logo1.gif" />
+                            
+                            </td>
+                        <td width="90%">
+                            &nbsp;<p align="right" />
+                            &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; <span id="sp_link" runat ="server" ></span></td>
+                    </tr>
+                    <tr>
+                        <td width="2%" style="height: 16px">
+                        </td>
+                        <td valign="top" width="8%" style="height: 22px; vertical-align:middle ;">
+                <asp:Label ID="lblempname" runat="server"  ForeColor="White" Font-Size="10pt" >dsfsdfsdf sdf sdf sd</asp:Label></td>
+                        <td width="90%" style="height: 16px">
+                        </td>
+                    </tr>
+                </table>
+                </td>
+        </tr>
+    </table>
+    <div align="center">
+        <table border="0" width="100%" id="table4" cellspacing="0" cellpadding="0">
+            <tr>
+                <td valign="top">
+                    <table border="0" width="100%" id="table13" cellpadding="0">
+                        <tr>
+                            <td width="10%" valign="top" bgcolor="white">
+                                <table border="0" width="100%" id="table63" cellspacing="0" height="100%">
+                                    <tr>
+                                        <td valign ="top">
+                                            <table align="left"  border="0" width="200" id="table65" cellspacing="0" cellpadding="0" height="100%">
+                                                <tr>
+                                                <td bgcolor="#001020" style="height:300px;" cellspacing="0" cellpadding="0"  align="center" valign="top" background ="images/b.gif">
+                                                    <br />
+                                                    <br />
+                                                    <span id="sp_linktable" runat ="server"></span>
+
+                                                    
+                                                    
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td valign="top" style="width: 68%" bgcolor="#ffffff">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table border="0" width="100%" id="table12" cellspacing="0" cellpadding="0" height="45">
+        <tr>
+            <td class="topbg" valign="top" style="background-image: url('images/bot_bg.gif'); text-align: center;"
+                width="100%">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Welcome User</td>
+        </tr>
+    </table>
+
+      
+      
+          </td>
+    </tr>
+    </table>
+    
+    </form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) [ResId]
+      ,[ResCustId]
+      ,[ResFlightId]
+      ,[ResDate]
+      ,[ResTotalAmount]
+      ,[ResStatus]
+      ,[ResTranscationNo]
+      ,[ResRandom]
+  FROM [eAirline].[dbo].[TempReservationMaster]
